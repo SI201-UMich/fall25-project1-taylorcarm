@@ -39,7 +39,11 @@ def calc_sales_by_shipmode_segment(data, column_dict):
         if ship_mode not in results[segment]:
             results[segment][ship_mode] = 0.0
 
-            results[segment][ship_mode] = sales
+        results[segment][ship_mode] += sales #was origibally just =, debugging with +=
+
+    for segment in results:
+        for ship_mode in results[segment]:
+            results[segment][ship_mode] = round(results[segment][ship_mode], 3)
 
     return results
     #pass
