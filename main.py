@@ -25,7 +25,7 @@ column_dict = {
     "Sales": 9, "Quantity": 10, "Discount": 11, "Profit": 12 
 }
 
-def calc_sales_by_shipmode_segment(data):
+def calc_sales_by_shipmode_segment(data, column_dict):
     results = {}
 
     for row in data:
@@ -39,6 +39,7 @@ def calc_sales_by_shipmode_segment(data):
         if ship_mode not in results[segment]:
             results[segment][ship_mode] = 0.0
 
-        else:
             results[segment][ship_mode] = sales
+
+    return results
     #pass
