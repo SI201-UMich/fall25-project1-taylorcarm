@@ -31,7 +31,17 @@ def calc_sales_by_shipmode_segment(data, column_dict):
     for row in data:
         segment = row[column_dict['Segment']]
         ship_mode = row[column_dict['Ship Mode']]
-        sales = float(row[column_dict['Sales']])
+        sales = row[column_dict['Sales']]
+
+        # checks if any column is blank, then skips
+        if segment == "" or ship_mode == "" or sales == "":
+            continue
+
+        # make sure sales is a valid number so later i can be made a float
+        if sales.replace('.', '', 1).isdigit() == False:
+            continue
+
+        sales = float(sales)
 
         # segment is outer key, ship_mode inner, sales is value
         if segment not in results:
@@ -41,6 +51,7 @@ def calc_sales_by_shipmode_segment(data, column_dict):
 
         results[segment][ship_mode] += sales #was origibally just =, debugging with +=
 
+    # round sales so it passes the tests
     for segment in results:
         for ship_mode in results[segment]:
             results[segment][ship_mode] = round(results[segment][ship_mode], 3)
