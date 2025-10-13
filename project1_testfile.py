@@ -1,7 +1,7 @@
 import unittest
 import os
 import csv
-from main import calc_sales_by_shipmode_segment
+from main import calc_sales_by_shipmode_segment, calc_highvaluepercentage_city_category
 
 class CalculationTests(unittest.TestCase):
     def setUp(self):
@@ -56,7 +56,7 @@ class CalculationTests(unittest.TestCase):
         expected = {}
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
-    def test_calc_sales_by_shipmode_segment_mixed(self):
+    def test_calc_sales_by_shipmode_segment_4(self):
         # check three different shipping modes and different segments
         data = [
             ["Standard Class", "Corporate", "United States", "Mesa", "Arizona", "85204", "West", "Office Supplies", "Paper", "86.272", "4", "0.2", "31.2736"],
@@ -73,7 +73,7 @@ class CalculationTests(unittest.TestCase):
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
-    def test_calc_sales_by_shipmode_segment_summing_multiple(self):
+    def test_calc_sales_by_shipmode_segment_5(self):
         # check all same segment and shipping mode
         data = [
             ["Standard Class", "Consumer", "United States", "Trenton", "Michigan", "48183", "Central", "Office Supplies", "Binders", "58.05", "3", "0", "26.703"],
@@ -88,7 +88,7 @@ class CalculationTests(unittest.TestCase):
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
-    def test_calc_sales_by_shipmode_segment_multiple_segments_varied(self):
+    def test_calc_sales_by_shipmode_segment_multiple_segments_6(self):
         # mized segments, same shipping mode
         data = [
             ["Same Day", "Corporate", "United States", "San Diego", "California", "92105", "West", "Furniture", "Tables", "567.12", "10", "0.2", "-28.356"],
@@ -106,11 +106,11 @@ class CalculationTests(unittest.TestCase):
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
-    def test_calc_sales_by_shipmode_segment_with_bad_data(self):
+    def test_calc_sales_by_shipmode_segment_bad_data(self):
         # missing data
         data = [
             ["Standard Class", "Corporate", "United States", "Green Bay", "Wisconsin", "54302", "Central", "Office Supplies", "Paper", "22.72", "4", "0", "10.224"],
-            ["", "Consumer", "United States", "Los Angeles", "California", "90036", "West", "Furniture", "Furnishings", "", "2", "0", "5.4"],  # Missing ship mode + sales
+            ["", "Consumer", "United States", "Los Angeles", "California", "90036", "West", "Furniture", "Furnishings", "", "2", "0", "5.4"],  # missing ship mode and sales
             ["Second Class", "Home Office", "United States", "Costa Mesa", "California", "92627", "West", "Technology", "Accessories", "239.97", "3", "0", "26.3967"],
             ["First Class", "Corporate", "United States", "Houston", "Texas", "77041", "Central", "Technology", "Phones", "946.344", "7", "0.2", "118.293"],
             ["Standard Class", "Consumer", "United States", "Dallas", "Texas", "75220", "Central", "Office Supplies", "Supplies", "51.52", "5", "0.2", "-10.948"],
@@ -124,7 +124,21 @@ class CalculationTests(unittest.TestCase):
             "Consumer": {"Standard Class": 51.52, "Second Class": 55.77}  # 42.81 + 12.96
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
-
+    
+    ###
+    # tests for calchighvaluepercentagecitycategory
+    def test_highvalue_1(self):
+        data = [
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Binders","26.046","3","0.8","-44.2782"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Storage","32.544","2","0.2","-7.7292"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Technology","Phones","122.92","7","0.2","46.095"]
+        ]
+        expected = [
+            {'city': 'Houston', 'category': 'Office Supplies', 'total_sales': 2, 'high_value_sales': 0, 'high_value_percentage': 0.0},
+            {'city': 'Houston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
+        ]
+        self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
+        
 def main():
     unittest.main(verbosity=2)
 
