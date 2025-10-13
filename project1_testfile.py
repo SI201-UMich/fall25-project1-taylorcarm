@@ -128,6 +128,7 @@ class CalculationTests(unittest.TestCase):
     ###
     # tests for calchighvaluepercentagecitycategory
     def test_highvalue_1(self):
+        # there are 0 high value sales
         data = [
             ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Binders","26.046","3","0.8","-44.2782"],
             ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Storage","32.544","2","0.2","-7.7292"],
@@ -138,7 +139,114 @@ class CalculationTests(unittest.TestCase):
             {'city': 'Houston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
         ]
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
-        
+
+    def test_calc_highvalue_2(self):
+        # some high value sales
+        data = [
+            ["Standard Class","Consumer","United States","Los Angeles","California","90032","West","Technology","Copiers","3359.952","6","0.2","1049.985"],
+            ["Standard Class","Consumer","United States","Los Angeles","California","90008","West","Office Supplies","Paper","42.8","10","0","19.26"],
+            ["Standard Class","Consumer","United States","Los Angeles","California","90008","West","Technology","Accessories","248.85","5","0","27.3735"]
+        ]
+        expected = [
+            {'city': 'Los Angeles', 'category': 'Technology', 'total_sales': 2, 'high_value_sales': 1, 'high_value_percentage': 50.0},
+            {'city': 'Los Angeles', 'category': 'Office Supplies', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
+        ]
+        self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
+
+    def test_calc_highvalue_3(self):
+        # all sales are high value
+        data = [
+            ["Same Day","Corporate","United States","San Francisco","California","94122","West","Technology","Machines","1919.976","3","0.2","215.9973"],
+            ["Second Class","Corporate","United States","Provo","Utah","84604","West","Furniture","Bookcases","1292.94","3","0","77.5764"],
+            ["First Class","Home Office","United States","New York City","New York","10035","East","Technology","Machines","1704.89","11","0","767.2005"]
+        ]
+        expected = [
+            {'city': 'San Francisco', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
+            {'city': 'Provo', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
+            {'city': 'New York City', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0}
+        ]
+        self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
+
+    def test_highvalue_4(self):
+        # multiple cities
+        data = [
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","1500","2","0","200"],
+            ["Standard Class","Consumer","United States","Dallas","Texas","75201","Central","Technology","Phones","3000","1","0","500"],
+            ["Standard Class","Consumer","United States","Dallas","Texas","75201","Central","Furniture","Tables","700","3","0","50"]
+        ]
+
+        expected = [
+            {'city': 'Houston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
+            {'city': 'Dallas', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
+            {'city': 'Dallas', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
+        ]
+
+        result = calc_highvaluepercentage_city_category(data, self.column_dict)
+        self.assertEqual(result, expected)
+
+    def test_highvalue_5(self):
+        # bad data (missing city, etc)
+        data = [
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","abc","2","0","200"],
+            ["Standard Class","Consumer","United States","","Texas","77095","Central","Technology","Phones","1500","3","0","200"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","","Storage","2000","1","0","200"]
+        ]
+
+        expected = []
+
+        result = calc_highvaluepercentage_city_category(data, self.column_dict)
+        self.assertEqual(result, expected)
+
+    def test_highvalue_6(self):
+        # same city
+        data = [
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Binders","26.046","3","0.8","-44.2782"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Storage","32.544","2","0.2","-7.7292"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Technology","Phones","122.92","7","0.2","46.095"],
+            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","1500","2","0","200"]
+        ]
+
+        expected = [
+            {'city': 'Houston', 'category': 'Office Supplies', 'total_sales': 2, 'high_value_sales': 0, 'high_value_percentage': 0.0},
+            {'city': 'Houston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0},
+            {'city': 'Houston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0}
+        ]
+
+        result = calc_highvaluepercentage_city_category(data, self.column_dict)
+        self.assertEqual(result, expected)
+
+    def test_highvalue_7(self):
+    # some correct sales values and some invalid sales values
+        data = [
+            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Technology","Phones","1,500","3","0","200"],  # comma in sales
+            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Furniture","Chairs","950","1","0","80"],
+            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Office Supplies","Paper","NaN","2","0","10"]  # NaN in sales column
+        ]
+
+        expected = [
+            {'city': 'Chicago', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
+        ]
+
+        result = calc_highvaluepercentage_city_category(data, self.column_dict)
+        self.assertEqual(result, expected)
+
+    def test_highvalue_8(self):
+    # sales exactly equal to 1000 
+        data = [
+            ["Standard Class","Consumer","United States","Boston","Massachusetts","02108","East","Technology","Accessories","1000","2","0","100"],
+            ["Standard Class","Consumer","United States","Boston","Massachusetts","02108","East","Furniture","Tables","1200","1","0","200"]
+        ]
+
+        expected = [
+            {'city': 'Boston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0},
+            {'city': 'Boston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0}
+        ]
+
+        result = calc_highvaluepercentage_city_category(data, self.column_dict)
+        self.assertEqual(result, expected)
+
+
+
 def main():
     unittest.main(verbosity=2)
 
