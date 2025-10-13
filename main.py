@@ -58,3 +58,41 @@ def calc_sales_by_shipmode_segment(data, column_dict):
 
     return results
     #pass
+
+def calc_highvaluepercentage_city_category(data, column_dict):
+    results = []
+    counts = {}
+    highsales_threshold = 1000
+
+    for row in data:
+        city = row[column_dict['City']]
+        category = row[column_dict['Category']]
+        sales = row[column_dict['Sales']]
+
+        if city == "" or category == "" or sales =="":
+            continue
+        if sales.replace('.', '', 1).isdigit() == False:
+            continue
+
+        sales = float(sales)
+        key = (city, category)
+
+        if key not in counts:
+            counts[key] = {'total': 0, 'high_value': 0}
+
+        counts[key]['total'] += 1
+
+        if sales > highsales_threshold:
+            counts[key]['high_value'] += 1
+
+    for (city, category), values in counts.items():
+        total = values['total']
+        high_value = values['high_value']
+        percentage = (high_value / total) * 100
+
+        results.append({'City': city, 'Category': category, 'Total Sales': total, 
+                            'High Value Sales': high_value, 'High Value %': round(percentage, 2)})
+
+    return results
+
+    #pass
