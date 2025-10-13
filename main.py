@@ -90,8 +90,8 @@ def calc_highvaluepercentage_city_category(data, column_dict):
         high_value = values['high_value']
         percentage = (high_value / total) * 100
 
-        results.append({'City': city, 'Category': category, 'Total Sales': total, 
-                            'High Value Sales': high_value, 'High Value %': round(percentage, 2)})
+        results.append({'city': city, 'category': category, 'total_sales': total, 
+                            'high_value_sales': high_value, 'high_value_percentage': round(percentage, 2)})
 
     return results
 
