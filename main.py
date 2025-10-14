@@ -1,6 +1,11 @@
 # set up files, added samplesuperstore.csv to folder
 import csv
 
+#name: Carmela Taylor
+#umid: 58771562
+#email: carmelat@umich.edu
+#collaborators: Kristen May & Katia Hemphill; GenAI to help debug, explain some function logic, and help with expected values for test cases
+
 def get_data(file):
     data = []
     # inFile = open(file)
@@ -96,3 +101,50 @@ def calc_highvaluepercentage_city_category(data, column_dict):
     return results
 
     #pass
+
+def write_shipmode_segment_to_csv(filename, ndict):
+    outFile = open(filename, "w")
+    csv_writer = csv.writer(outFile)
+
+    csv_writer.writerow(['Segment', 'Ship Mode', 'Total Sales'])
+
+    for segment in ndict:
+        inner_d = ndict[segment]  
+        for ship_mode in inner_d:
+            total_sales = inner_d[ship_mode]
+            out_list = [segment, ship_mode, total_sales]
+            csv_writer.writerow(out_list)
+
+    outFile.close()
+
+def write_highvaluepercentage_to_csv(filename, listdict):
+    outFile = open(filename, "w")
+    csv_writer = csv.writer(outFile)
+
+    csv_writer.writerow(['City', 'Category', 'Total Sales', 'High Value Sales', 'High Value %'])
+
+    for item in listdict:
+        out_list = [
+            item['city'],
+            item['category'],
+            item['total_sales'],
+            item['high_value_sales'],
+            item['high_value_percentage']
+        ]
+        csv_writer.writerow(out_list)
+
+    outFile.close()
+
+def main():
+    data = get_data("SampleSuperstore.csv")
+
+    results1 = calc_sales_by_shipmode_segment(data, column_dict)
+    results2 = calc_highvaluepercentage_city_category(data, column_dict)
+
+    write_shipmode_segment_to_csv("shipmode_segment_results.csv", results1)
+    write_highvaluepercentage_to_csv("highvalue_results.csv", results2)
+
+    print("Results written to both CSV files successfully!")
+
+if __name__ == '__main__':
+    main()
