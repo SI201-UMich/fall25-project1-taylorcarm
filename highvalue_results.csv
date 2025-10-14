@@ -1,0 +1,1199 @@
+City,Category,Total Sales,High Value Sales,High Value %
+Henderson,Furniture,15,2,13.33
+Los Angeles,Office Supplies,443,9,2.03
+Fort Lauderdale,Furniture,5,0,0.0
+Fort Lauderdale,Office Supplies,6,1,16.67
+Los Angeles,Furniture,154,10,6.49
+Los Angeles,Technology,150,17,11.33
+Concord,Office Supplies,16,0,0.0
+Seattle,Office Supplies,249,10,4.02
+Fort Worth,Office Supplies,16,0,0.0
+Madison,Office Supplies,7,1,14.29
+West Jordan,Office Supplies,4,0,0.0
+San Francisco,Office Supplies,322,6,1.86
+San Francisco,Technology,86,9,10.47
+Fremont,Office Supplies,6,0,0.0
+Philadelphia,Furniture,111,7,6.31
+Orem,Furniture,3,2,66.67
+Philadelphia,Office Supplies,312,6,1.92
+Houston,Office Supplies,231,3,1.3
+Richardson,Technology,1,1,100.0
+Richardson,Furniture,1,0,0.0
+Houston,Furniture,81,3,3.7
+Houston,Technology,65,5,7.69
+Naperville,Technology,2,0,0.0
+Melbourne,Office Supplies,1,0,0.0
+Eagan,Technology,1,0,0.0
+Eagan,Office Supplies,7,0,0.0
+Westland,Office Supplies,10,0,0.0
+Dover,Technology,5,1,20.0
+New Albany,Office Supplies,2,0,0.0
+New Albany,Furniture,2,0,0.0
+New York City,Office Supplies,552,13,2.36
+New York City,Technology,171,27,15.79
+Troy,Office Supplies,16,0,0.0
+Troy,Furniture,8,0,0.0
+Troy,Technology,5,1,20.0
+Chicago,Furniture,68,0,0.0
+Gilbert,Office Supplies,6,1,16.67
+Gilbert,Technology,3,0,0.0
+Springfield,Office Supplies,104,1,0.96
+Jackson,Office Supplies,51,1,1.96
+Memphis,Furniture,9,0,0.0
+Memphis,Office Supplies,20,1,5.0
+Decatur,Office Supplies,20,0,0.0
+Durham,Office Supplies,7,0,0.0
+Chicago,Office Supplies,187,3,1.6
+Columbia,Furniture,18,3,16.67
+Rochester,Technology,9,0,0.0
+Rochester,Office Supplies,35,1,2.86
+Minneapolis,Office Supplies,17,2,11.76
+Minneapolis,Furniture,5,1,20.0
+Portland,Office Supplies,13,0,0.0
+New York City,Furniture,192,17,8.85
+Saint Paul,Office Supplies,1,0,0.0
+Chicago,Technology,59,6,10.17
+Aurora,Technology,10,1,10.0
+Aurora,Furniture,21,0,0.0
+Aurora,Office Supplies,37,0,0.0
+Charlotte,Technology,13,2,15.38
+Charlotte,Office Supplies,33,0,0.0
+Orland Park,Technology,1,0,0.0
+Urbandale,Office Supplies,3,0,0.0
+Columbus,Office Supplies,135,1,0.74
+Seattle,Furniture,97,11,11.34
+Bristol,Office Supplies,9,0,0.0
+Wilmington,Furniture,6,2,33.33
+Wilmington,Office Supplies,25,0,0.0
+Wilmington,Technology,5,0,0.0
+Bloomington,Furniture,3,0,0.0
+Phoenix,Office Supplies,37,0,0.0
+Columbus,Technology,39,5,12.82
+Roseville,Office Supplies,22,0,0.0
+Roseville,Furniture,3,0,0.0
+Independence,Office Supplies,2,1,50.0
+Pasadena,Office Supplies,25,0,0.0
+Newark,Furniture,18,0,0.0
+Franklin,Technology,6,0,0.0
+Franklin,Furniture,13,3,23.08
+Franklin,Office Supplies,18,1,5.56
+Scottsdale,Office Supplies,8,0,0.0
+Scottsdale,Technology,2,0,0.0
+San Jose,Office Supplies,29,0,0.0
+Edmond,Office Supplies,1,0,0.0
+Edmond,Technology,1,0,0.0
+Philadelphia,Technology,114,8,7.02
+Carlsbad,Office Supplies,10,0,0.0
+San Antonio,Office Supplies,32,1,3.12
+San Antonio,Technology,15,1,6.67
+San Antonio,Furniture,12,1,8.33
+Newark,Office Supplies,54,1,1.85
+Decatur,Technology,7,0,0.0
+Monroe,Technology,8,0,0.0
+Fairfield,Office Supplies,30,0,0.0
+Grand Prairie,Office Supplies,7,0,0.0
+Redlands,Office Supplies,13,0,0.0
+Hamilton,Office Supplies,3,0,0.0
+Westfield,Office Supplies,3,0,0.0
+Akron,Office Supplies,14,0,0.0
+Denver,Furniture,11,0,0.0
+Denver,Office Supplies,19,1,5.26
+Dallas,Office Supplies,104,0,0.0
+Whittier,Technology,1,0,0.0
+Saginaw,Office Supplies,4,0,0.0
+Saginaw,Technology,1,0,0.0
+Dallas,Technology,26,1,3.85
+Medina,Office Supplies,2,0,0.0
+Medina,Furniture,2,0,0.0
+Medina,Technology,5,1,20.0
+Dublin,Office Supplies,7,0,0.0
+Dublin,Furniture,2,1,50.0
+Dublin,Technology,5,0,0.0
+Detroit,Office Supplies,65,1,1.54
+Detroit,Furniture,28,5,17.86
+Tampa,Furniture,11,1,9.09
+Tampa,Office Supplies,22,0,0.0
+Tampa,Technology,3,0,0.0
+Santa Clara,Office Supplies,6,0,0.0
+Lakeville,Furniture,2,1,50.0
+Lakeville,Office Supplies,13,1,7.69
+San Francisco,Furniture,102,13,12.75
+San Diego,Office Supplies,88,0,0.0
+San Diego,Technology,36,5,13.89
+Brentwood,Technology,5,0,0.0
+Chapel Hill,Office Supplies,1,0,0.0
+Morristown,Office Supplies,5,2,40.0
+Cincinnati,Office Supplies,13,0,0.0
+Inglewood,Office Supplies,11,0,0.0
+Portland,Technology,7,0,0.0
+Tamarac,Office Supplies,4,0,0.0
+Columbus,Furniture,48,1,2.08
+Colorado Springs,Furniture,9,1,11.11
+Colorado Springs,Office Supplies,15,0,0.0
+Belleville,Office Supplies,7,1,14.29
+Belleville,Furniture,2,0,0.0
+Taylor,Office Supplies,1,0,0.0
+Lakewood,Office Supplies,27,0,0.0
+Arlington,Office Supplies,37,0,0.0
+Arvada,Furniture,3,0,0.0
+Arvada,Office Supplies,1,0,0.0
+Hackensack,Furniture,3,0,0.0
+Saint Petersburg,Technology,2,0,0.0
+Saint Petersburg,Office Supplies,8,0,0.0
+Long Beach,Office Supplies,43,1,2.33
+Hesperia,Office Supplies,1,0,0.0
+Hesperia,Technology,1,0,0.0
+Murfreesboro,Furniture,3,0,0.0
+Layton,Office Supplies,1,0,0.0
+Austin,Office Supplies,27,0,0.0
+Lowell,Office Supplies,10,1,10.0
+Manchester,Office Supplies,9,0,0.0
+Manchester,Furniture,1,1,100.0
+Harlingen,Office Supplies,4,0,0.0
+Tucson,Office Supplies,14,0,0.0
+Tucson,Technology,9,1,11.11
+Quincy,Office Supplies,15,0,0.0
+Taylor,Technology,1,0,0.0
+Pembroke Pines,Furniture,2,0,0.0
+Pembroke Pines,Technology,4,0,0.0
+Des Moines,Technology,5,1,20.0
+Peoria,Office Supplies,13,0,0.0
+Las Vegas,Office Supplies,10,0,0.0
+Warwick,Office Supplies,3,0,0.0
+Miami,Office Supplies,39,1,2.56
+Huntington Beach,Office Supplies,5,0,0.0
+Richmond,Office Supplies,58,2,3.45
+Louisville,Technology,12,1,8.33
+Lawrence,Furniture,7,0,0.0
+Lawrence,Office Supplies,30,0,0.0
+Jackson,Furniture,13,2,15.38
+Canton,Furniture,1,0,0.0
+Canton,Office Supplies,2,0,0.0
+New Rochelle,Technology,2,0,0.0
+Gastonia,Office Supplies,2,0,0.0
+Gastonia,Technology,2,0,0.0
+Jacksonville,Office Supplies,73,2,2.74
+Jacksonville,Technology,28,1,3.57
+Auburn,Office Supplies,20,0,0.0
+Auburn,Technology,1,0,0.0
+Akron,Furniture,2,0,0.0
+Norman,Technology,2,1,50.0
+Concord,Furniture,10,1,10.0
+Decatur,Furniture,8,1,12.5
+Seattle,Technology,82,9,10.98
+Phoenix,Furniture,14,1,7.14
+Park Ridge,Furniture,1,0,0.0
+Amarillo,Furniture,4,1,25.0
+Lindenhurst,Office Supplies,1,0,0.0
+Huntsville,Technology,8,1,12.5
+Huntsville,Office Supplies,19,0,0.0
+Fayetteville,Office Supplies,27,1,3.7
+Costa Mesa,Office Supplies,3,0,0.0
+Costa Mesa,Furniture,6,0,0.0
+Parker,Office Supplies,5,0,0.0
+Parker,Furniture,3,0,0.0
+Atlanta,Office Supplies,29,3,10.34
+Gladstone,Furniture,1,0,0.0
+Gladstone,Technology,1,0,0.0
+Great Falls,Technology,3,1,33.33
+Great Falls,Office Supplies,5,1,20.0
+Lakeland,Furniture,7,1,14.29
+Montgomery,Technology,2,1,50.0
+Montgomery,Office Supplies,4,0,0.0
+Mesa,Office Supplies,19,0,0.0
+Henderson,Office Supplies,32,1,3.12
+Green Bay,Technology,1,0,0.0
+Fort Worth,Technology,6,2,33.33
+Fort Worth,Furniture,5,0,0.0
+Jacksonville,Furniture,24,2,8.33
+Anaheim,Office Supplies,17,1,5.88
+Marysville,Office Supplies,2,0,0.0
+Denver,Technology,14,1,7.14
+Richmond,Furniture,16,0,0.0
+Salem,Technology,8,0,0.0
+Salem,Office Supplies,28,0,0.0
+Laredo,Office Supplies,7,0,0.0
+Laredo,Technology,5,0,0.0
+San Diego,Furniture,46,5,10.87
+Grove City,Technology,1,0,0.0
+Grove City,Office Supplies,1,0,0.0
+Dearborn,Furniture,2,0,0.0
+Dearborn,Office Supplies,3,0,0.0
+Miami,Technology,10,1,10.0
+Warner Robins,Furniture,1,0,0.0
+Vallejo,Furniture,1,1,100.0
+Vallejo,Office Supplies,5,0,0.0
+Mission Viejo,Office Supplies,3,0,0.0
+Rochester Hills,Technology,1,0,0.0
+Plainfield,Office Supplies,11,1,9.09
+Sierra Vista,Office Supplies,2,0,0.0
+Vancouver,Furniture,2,0,0.0
+Vancouver,Technology,2,0,0.0
+Arlington,Furniture,13,1,7.69
+Louisville,Office Supplies,29,0,0.0
+Cleveland,Furniture,8,0,0.0
+Tyler,Office Supplies,3,0,0.0
+Tyler,Technology,1,0,0.0
+Tyler,Furniture,1,0,0.0
+Burlington,Technology,5,2,40.0
+Burlington,Office Supplies,16,2,12.5
+Jackson,Technology,18,2,11.11
+Waynesboro,Furniture,4,1,25.0
+Waynesboro,Technology,2,0,0.0
+Waynesboro,Office Supplies,4,0,0.0
+Chester,Office Supplies,10,0,0.0
+Long Beach,Furniture,9,2,22.22
+Cary,Office Supplies,4,0,0.0
+Cary,Technology,2,0,0.0
+Palm Coast,Office Supplies,3,0,0.0
+Mount Vernon,Office Supplies,6,1,16.67
+Mount Vernon,Technology,2,0,0.0
+Dover,Furniture,5,1,20.0
+Orem,Office Supplies,6,0,0.0
+Hialeah,Office Supplies,11,0,0.0
+Austin,Technology,9,1,11.11
+Oceanside,Office Supplies,13,0,0.0
+Oceanside,Furniture,13,0,0.0
+Naperville,Office Supplies,5,0,0.0
+Evanston,Technology,3,1,33.33
+Trenton,Office Supplies,7,0,0.0
+Trenton,Furniture,2,0,0.0
+Cottage Grove,Office Supplies,1,0,0.0
+Cottage Grove,Technology,1,0,0.0
+Green Bay,Office Supplies,1,0,0.0
+Bossier City,Office Supplies,4,0,0.0
+Bossier City,Technology,1,0,0.0
+Saint Petersburg,Furniture,4,0,0.0
+Des Moines,Office Supplies,11,0,0.0
+Des Moines,Furniture,3,1,33.33
+Columbia,Office Supplies,52,3,5.77
+Lancaster,Office Supplies,30,0,0.0
+Lancaster,Furniture,7,0,0.0
+Asheville,Technology,1,1,100.0
+Lake Elsinore,Furniture,1,0,0.0
+Monroe,Office Supplies,7,0,0.0
+Omaha,Furniture,3,1,33.33
+Omaha,Technology,7,1,14.29
+Edmonds,Office Supplies,8,0,0.0
+Edmonds,Furniture,3,1,33.33
+Edmonds,Technology,3,0,0.0
+Santa Ana,Furniture,3,0,0.0
+Santa Ana,Technology,4,1,25.0
+Milwaukee,Office Supplies,19,0,0.0
+Belleville,Technology,1,0,0.0
+Florence,Furniture,3,1,33.33
+Florence,Office Supplies,12,0,0.0
+Florence,Technology,6,1,16.67
+Louisville,Furniture,16,1,6.25
+Lorain,Furniture,3,1,33.33
+Linden,Technology,1,0,0.0
+Salinas,Office Supplies,7,0,0.0
+New Brunswick,Office Supplies,2,0,0.0
+Springfield,Furniture,27,5,18.52
+Concord,Technology,5,1,20.0
+Rochester,Furniture,9,0,0.0
+New Rochelle,Office Supplies,5,0,0.0
+Detroit,Technology,22,1,4.55
+Garland,Office Supplies,3,0,0.0
+Norwich,Furniture,1,0,0.0
+Milwaukee,Furniture,16,2,12.5
+Milwaukee,Technology,10,1,10.0
+Alexandria,Office Supplies,10,1,10.0
+Toledo,Office Supplies,21,0,0.0
+Farmington,Technology,1,0,0.0
+Riverside,Office Supplies,12,0,0.0
+Torrance,Office Supplies,2,1,50.0
+Torrance,Furniture,1,1,100.0
+Mesa,Furniture,5,0,0.0
+Round Rock,Office Supplies,3,1,33.33
+Round Rock,Furniture,2,0,0.0
+Phoenix,Technology,12,1,8.33
+Boca Raton,Office Supplies,2,0,0.0
+Pasadena,Technology,6,0,0.0
+Auburn,Furniture,3,0,0.0
+Virginia Beach,Office Supplies,8,1,12.5
+Virginia Beach,Technology,3,0,0.0
+Vancouver,Office Supplies,1,0,0.0
+Murrieta,Office Supplies,1,0,0.0
+Olympia,Furniture,2,0,0.0
+Olympia,Office Supplies,2,0,0.0
+Washington,Office Supplies,6,0,0.0
+Washington,Furniture,3,1,33.33
+Washington,Technology,1,1,100.0
+Springfield,Technology,32,3,9.38
+Hackensack,Office Supplies,2,0,0.0
+Hackensack,Technology,1,0,0.0
+Jefferson City,Furniture,1,0,0.0
+Saint Peters,Furniture,1,0,0.0
+Rockford,Furniture,2,0,0.0
+Miami,Furniture,8,0,0.0
+Toledo,Technology,8,1,12.5
+Brownsville,Office Supplies,4,0,0.0
+Mesa,Technology,4,0,0.0
+Yonkers,Furniture,2,0,0.0
+Yonkers,Office Supplies,8,0,0.0
+Yonkers,Technology,5,1,20.0
+Oakland,Technology,6,0,0.0
+Oakland,Office Supplies,11,1,9.09
+Monroe,Furniture,6,0,0.0
+Clinton,Office Supplies,18,0,0.0
+Encinitas,Office Supplies,2,0,0.0
+Encinitas,Furniture,2,0,0.0
+Encinitas,Technology,1,0,0.0
+Roswell,Office Supplies,12,2,16.67
+Roswell,Technology,4,0,0.0
+Jonesboro,Technology,2,0,0.0
+Jonesboro,Office Supplies,6,0,0.0
+Jonesboro,Furniture,3,1,33.33
+Antioch,Office Supplies,1,0,0.0
+Homestead,Office Supplies,3,0,0.0
+La Porte,Office Supplies,6,0,0.0
+Lansing,Office Supplies,4,0,0.0
+Lansing,Technology,2,0,0.0
+Cuyahoga Falls,Furniture,1,0,0.0
+Reno,Office Supplies,3,0,0.0
+Harrisonburg,Office Supplies,2,0,0.0
+Harrisonburg,Furniture,4,2,50.0
+Escondido,Office Supplies,3,0,0.0
+Royal Oak,Office Supplies,2,0,0.0
+Bloomington,Office Supplies,10,0,0.0
+Rockville,Furniture,1,0,0.0
+Rockville,Technology,2,0,0.0
+Lakewood,Technology,9,2,22.22
+Coral Springs,Office Supplies,5,0,0.0
+Coral Springs,Furniture,3,0,0.0
+Buffalo,Office Supplies,4,1,25.0
+Cincinnati,Technology,3,0,0.0
+Boynton Beach,Furniture,4,0,0.0
+Boynton Beach,Office Supplies,6,0,0.0
+Gulfport,Office Supplies,2,0,0.0
+Fresno,Furniture,7,1,14.29
+Chester,Technology,2,0,0.0
+Chester,Furniture,4,0,0.0
+Greenville,Office Supplies,3,0,0.0
+La Porte,Technology,1,0,0.0
+La Porte,Furniture,3,0,0.0
+Macon,Technology,2,0,0.0
+Cedar Rapids,Technology,1,0,0.0
+Providence,Office Supplies,17,2,11.76
+Pueblo,Office Supplies,6,0,0.0
+Saint Paul,Technology,1,0,0.0
+Pasadena,Furniture,11,1,9.09
+Deltona,Technology,2,0,0.0
+Deltona,Office Supplies,2,0,0.0
+Murray,Office Supplies,3,0,0.0
+Norwich,Office Supplies,3,0,0.0
+Lorain,Technology,2,0,0.0
+Lorain,Office Supplies,4,0,0.0
+Middletown,Office Supplies,6,0,0.0
+Freeport,Office Supplies,7,0,0.0
+Evanston,Furniture,1,0,0.0
+Tucson,Furniture,9,0,0.0
+Pico Rivera,Furniture,1,0,0.0
+Clinton,Technology,4,1,25.0
+Provo,Furniture,2,1,50.0
+Pleasant Grove,Office Supplies,6,1,16.67
+Pleasant Grove,Technology,1,0,0.0
+Smyrna,Office Supplies,18,0,0.0
+Smyrna,Furniture,3,0,0.0
+Smyrna,Technology,3,0,0.0
+Costa Mesa,Technology,2,0,0.0
+Parma,Office Supplies,6,0,0.0
+Amarillo,Technology,3,0,0.0
+Mobile,Office Supplies,5,0,0.0
+Mobile,Technology,3,1,33.33
+New Bedford,Office Supplies,3,0,0.0
+Irving,Office Supplies,7,0,0.0
+Middletown,Furniture,2,0,0.0
+Vineland,Furniture,3,0,0.0
+Glendale,Furniture,5,0,0.0
+Glendale,Technology,5,0,0.0
+Niagara Falls,Office Supplies,2,0,0.0
+Thomasville,Office Supplies,3,0,0.0
+Westminster,Technology,5,0,0.0
+Coppell,Office Supplies,3,0,0.0
+Omaha,Office Supplies,18,0,0.0
+Pomona,Office Supplies,3,0,0.0
+North Las Vegas,Furniture,5,1,20.0
+Allentown,Office Supplies,5,0,0.0
+Allentown,Furniture,1,0,0.0
+Tempe,Office Supplies,8,0,0.0
+Laguna Niguel,Furniture,1,0,0.0
+Bridgeton,Office Supplies,2,0,0.0
+Everett,Technology,4,0,0.0
+Everett,Office Supplies,12,0,0.0
+Everett,Furniture,6,1,16.67
+Watertown,Furniture,4,1,25.0
+Appleton,Office Supplies,1,0,0.0
+Bellevue,Office Supplies,5,0,0.0
+Long Beach,Technology,9,1,11.11
+Allen,Technology,1,0,0.0
+Allen,Office Supplies,2,0,0.0
+El Paso,Technology,3,0,0.0
+El Paso,Furniture,5,0,0.0
+Grapevine,Office Supplies,2,0,0.0
+Olympia,Technology,1,0,0.0
+Peoria,Furniture,6,0,0.0
+Carrollton,Office Supplies,9,0,0.0
+Carrollton,Furniture,2,0,0.0
+Kent,Furniture,1,0,0.0
+Kent,Office Supplies,7,0,0.0
+Kent,Technology,5,0,0.0
+Lafayette,Furniture,9,1,11.11
+Cleveland,Office Supplies,24,1,4.17
+Cleveland,Technology,10,0,0.0
+Tigard,Office Supplies,4,0,0.0
+Tigard,Technology,3,0,0.0
+Skokie,Office Supplies,7,0,0.0
+North Las Vegas,Technology,3,0,0.0
+Plano,Technology,5,0,0.0
+Suffolk,Office Supplies,8,0,0.0
+Indianapolis,Office Supplies,18,2,11.11
+Bayonne,Technology,2,0,0.0
+Bayonne,Office Supplies,1,0,0.0
+Glendale,Office Supplies,13,0,0.0
+Oakland,Furniture,9,1,11.11
+Suffolk,Furniture,2,0,0.0
+Greensboro,Office Supplies,7,0,0.0
+Baltimore,Office Supplies,27,0,0.0
+Kenosha,Technology,5,0,0.0
+Madison,Furniture,2,1,50.0
+Olathe,Office Supplies,3,0,0.0
+San Jose,Furniture,10,0,0.0
+Tulsa,Technology,4,0,0.0
+Redmond,Office Supplies,5,0,0.0
+Redmond,Furniture,3,0,0.0
+Raleigh,Technology,8,1,12.5
+Macon,Office Supplies,3,0,0.0
+Muskogee,Technology,1,1,100.0
+Muskogee,Furniture,1,0,0.0
+Meriden,Office Supplies,10,0,0.0
+Charlotte,Furniture,6,0,0.0
+Bowling Green,Furniture,1,0,0.0
+South Bend,Office Supplies,5,0,0.0
+South Bend,Technology,1,0,0.0
+Bristol,Technology,2,0,0.0
+Newark,Technology,23,3,13.04
+Spokane,Furniture,2,0,0.0
+Keller,Office Supplies,1,0,0.0
+Fairfield,Furniture,10,0,0.0
+Port Orange,Office Supplies,1,0,0.0
+Medford,Office Supplies,4,0,0.0
+Charlottesville,Office Supplies,1,0,0.0
+Missoula,Office Supplies,1,0,0.0
+Apopka,Office Supplies,6,0,0.0
+Watertown,Office Supplies,6,0,0.0
+Reading,Office Supplies,2,0,0.0
+Arlington,Technology,10,2,20.0
+Broomfield,Office Supplies,3,0,0.0
+Broomfield,Furniture,2,0,0.0
+Carrollton,Technology,4,1,25.0
+Paterson,Technology,1,0,0.0
+Paterson,Office Supplies,13,0,0.0
+Montgomery,Furniture,4,0,0.0
+Oklahoma City,Technology,5,0,0.0
+Brentwood,Office Supplies,10,1,10.0
+Brentwood,Furniture,1,0,0.0
+Chesapeake,Office Supplies,9,0,0.0
+Chesapeake,Technology,5,0,0.0
+Lubbock,Office Supplies,4,0,0.0
+Columbia,Technology,11,0,0.0
+Johnson City,Office Supplies,10,0,0.0
+San Bernardino,Office Supplies,8,0,0.0
+Providence,Furniture,7,0,0.0
+Fresno,Office Supplies,15,0,0.0
+Leominster,Office Supplies,6,0,0.0
+Bozeman,Office Supplies,2,0,0.0
+Perth Amboy,Office Supplies,6,0,0.0
+Perth Amboy,Technology,1,0,0.0
+Pomona,Technology,2,0,0.0
+Pomona,Furniture,2,0,0.0
+Ontario,Furniture,1,0,0.0
+Rancho Cucamonga,Office Supplies,4,0,0.0
+Moorhead,Furniture,1,0,0.0
+Farmington,Office Supplies,1,0,0.0
+Mesquite,Office Supplies,3,0,0.0
+Redlands,Furniture,2,0,0.0
+Redlands,Technology,1,1,100.0
+Stockton,Office Supplies,4,0,0.0
+Ormond Beach,Office Supplies,1,0,0.0
+Sunnyvale,Furniture,1,0,0.0
+Lansing,Furniture,2,0,0.0
+Dover,Office Supplies,9,0,0.0
+Grand Prairie,Furniture,4,0,0.0
+York,Furniture,1,0,0.0
+York,Office Supplies,4,0,0.0
+College Station,Furniture,1,0,0.0
+Saint Louis,Technology,1,0,0.0
+Dallas,Furniture,27,1,3.7
+Cincinnati,Furniture,1,0,0.0
+Manteca,Office Supplies,2,0,0.0
+Laredo,Furniture,1,0,0.0
+San Angelo,Furniture,3,0,0.0
+Salt Lake City,Office Supplies,8,0,0.0
+Knoxville,Office Supplies,14,0,0.0
+Little Rock,Furniture,1,0,0.0
+Little Rock,Technology,6,0,0.0
+Fairfield,Technology,5,0,0.0
+Lincoln Park,Office Supplies,2,0,0.0
+Marion,Technology,4,0,0.0
+Marion,Office Supplies,10,0,0.0
+Marion,Furniture,6,1,16.67
+Littleton,Furniture,1,0,0.0
+Provo,Office Supplies,8,0,0.0
+Bangor,Technology,2,0,0.0
+Bangor,Furniture,1,0,0.0
+Atlanta,Technology,6,1,16.67
+Southaven,Office Supplies,4,0,0.0
+Southaven,Furniture,1,0,0.0
+Southaven,Technology,2,0,0.0
+New Castle,Technology,1,0,0.0
+New Castle,Office Supplies,1,0,0.0
+Murfreesboro,Office Supplies,6,0,0.0
+Midland,Office Supplies,11,1,9.09
+Roswell,Furniture,2,0,0.0
+Sioux Falls,Office Supplies,6,0,0.0
+Sioux Falls,Furniture,1,0,0.0
+Sioux Falls,Technology,2,0,0.0
+Fort Collins,Office Supplies,3,0,0.0
+Lafayette,Office Supplies,18,1,5.56
+Clarksville,Office Supplies,4,1,25.0
+Warner Robins,Office Supplies,1,0,0.0
+Sacramento,Furniture,4,1,25.0
+Warwick,Technology,2,1,50.0
+Thousand Oaks,Office Supplies,3,0,0.0
+Fresno,Technology,4,0,0.0
+Malden,Office Supplies,2,0,0.0
+Huntsville,Furniture,9,1,11.11
+Holyoke,Furniture,1,0,0.0
+Albuquerque,Technology,5,0,0.0
+Albuquerque,Office Supplies,9,0,0.0
+Sparks,Technology,1,1,100.0
+Coachella,Office Supplies,1,0,0.0
+Coachella,Technology,1,0,0.0
+Elmhurst,Office Supplies,3,0,0.0
+Farmington,Furniture,1,0,0.0
+Passaic,Technology,3,0,0.0
+Passaic,Furniture,1,0,0.0
+Passaic,Office Supplies,2,0,0.0
+North Charleston,Office Supplies,1,0,0.0
+Newport News,Office Supplies,10,0,0.0
+Fayetteville,Furniture,9,0,0.0
+Jamestown,Technology,2,1,50.0
+Mishawaka,Furniture,1,0,0.0
+Oklahoma City,Office Supplies,13,1,7.69
+Bowling Green,Office Supplies,5,0,0.0
+Westfield,Furniture,2,0,0.0
+Little Rock,Office Supplies,17,0,0.0
+La Quinta,Technology,1,0,0.0
+Scottsdale,Furniture,2,0,0.0
+Malden,Furniture,1,0,0.0
+Tallahassee,Technology,5,1,20.0
+Nashville,Office Supplies,21,1,4.76
+Bowling Green,Technology,4,0,0.0
+Bellingham,Office Supplies,1,0,0.0
+Bellingham,Furniture,1,1,100.0
+Woodstock,Office Supplies,3,0,0.0
+Alexandria,Furniture,3,0,0.0
+Alexandria,Technology,3,0,0.0
+Haltom City,Office Supplies,3,0,0.0
+Wheeling,Furniture,3,0,0.0
+Summerville,Technology,1,0,0.0
+Summerville,Office Supplies,1,0,0.0
+Carlsbad,Technology,1,0,0.0
+Saint Louis,Office Supplies,4,0,0.0
+Tulsa,Office Supplies,15,0,0.0
+Hot Springs,Technology,1,0,0.0
+Raleigh,Furniture,4,0,0.0
+Tulsa,Furniture,7,1,14.29
+Hesperia,Furniture,2,0,0.0
+Gilbert,Furniture,6,0,0.0
+Amarillo,Office Supplies,3,0,0.0
+Lowell,Furniture,3,0,0.0
+Asheville,Office Supplies,6,0,0.0
+Englewood,Office Supplies,1,0,0.0
+Englewood,Technology,1,0,0.0
+Hialeah,Furniture,4,1,25.0
+Lakewood,Furniture,13,1,7.69
+Plainfield,Technology,2,0,0.0
+Las Cruces,Office Supplies,2,0,0.0
+Hoover,Office Supplies,3,0,0.0
+Hoover,Technology,1,0,0.0
+Frisco,Technology,1,0,0.0
+Tallahassee,Office Supplies,10,0,0.0
+Vacaville,Office Supplies,1,0,0.0
+Waukesha,Office Supplies,1,0,0.0
+Bakersfield,Furniture,5,0,0.0
+Pompano Beach,Furniture,1,0,0.0
+Pompano Beach,Technology,1,0,0.0
+Corpus Christi,Furniture,3,0,0.0
+Corpus Christi,Office Supplies,5,0,0.0
+Redondo Beach,Technology,2,1,50.0
+Redondo Beach,Office Supplies,5,0,0.0
+Redondo Beach,Furniture,1,0,0.0
+Las Cruces,Furniture,1,0,0.0
+Anaheim,Technology,2,0,0.0
+Chesapeake,Furniture,4,3,75.0
+Woodstock,Furniture,1,0,0.0
+Atlanta,Furniture,4,1,25.0
+Orlando,Office Supplies,7,0,0.0
+Westfield,Technology,1,0,0.0
+Orange,Office Supplies,6,0,0.0
+Tempe,Furniture,1,0,0.0
+Lake Charles,Furniture,1,0,0.0
+Lake Charles,Office Supplies,2,0,0.0
+Highland Park,Office Supplies,3,0,0.0
+Highland Park,Furniture,3,0,0.0
+Hempstead,Office Supplies,6,0,0.0
+Noblesville,Technology,2,0,0.0
+Noblesville,Office Supplies,1,0,0.0
+Apple Valley,Office Supplies,6,0,0.0
+Saginaw,Furniture,1,0,0.0
+Skokie,Furniture,3,0,0.0
+Allen,Furniture,1,0,0.0
+Mount Pleasant,Furniture,2,0,0.0
+Sterling Heights,Office Supplies,3,0,0.0
+Eau Claire,Office Supplies,3,0,0.0
+Murray,Furniture,1,0,0.0
+Pharr,Office Supplies,1,0,0.0
+Pharr,Furniture,2,0,0.0
+Pharr,Technology,1,0,0.0
+West Jordan,Furniture,1,0,0.0
+Brownsville,Furniture,2,0,0.0
+Billings,Office Supplies,1,0,0.0
+Gresham,Technology,1,0,0.0
+Lincoln Park,Furniture,1,0,0.0
+Gresham,Furniture,2,1,50.0
+Chattanooga,Furniture,4,0,0.0
+Meridian,Furniture,1,0,0.0
+Meridian,Office Supplies,3,0,0.0
+Apple Valley,Technology,1,0,0.0
+Henderson,Technology,4,1,25.0
+Bolingbrook,Office Supplies,5,0,0.0
+Lakeland,Technology,6,0,0.0
+Lakeland,Office Supplies,9,1,11.11
+Austin,Furniture,3,0,0.0
+Maple Grove,Office Supplies,4,0,0.0
+Tallahassee,Furniture,2,0,0.0
+Fort Collins,Furniture,3,0,0.0
+Fort Collins,Technology,1,0,0.0
+Lowell,Technology,3,0,0.0
+Woodland,Office Supplies,2,0,0.0
+Missouri City,Office Supplies,1,0,0.0
+Pearland,Office Supplies,2,0,0.0
+San Mateo,Office Supplies,1,0,0.0
+Tempe,Technology,4,0,0.0
+Grand Prairie,Technology,2,0,0.0
+Grand Rapids,Office Supplies,6,0,0.0
+Visalia,Technology,1,0,0.0
+Overland Park,Office Supplies,5,0,0.0
+Raleigh,Office Supplies,10,0,0.0
+Muskogee,Office Supplies,2,0,0.0
+Temecula,Technology,3,0,0.0
+Temecula,Office Supplies,1,0,0.0
+Gulfport,Furniture,1,0,0.0
+Quincy,Furniture,2,0,0.0
+Quincy,Technology,3,0,0.0
+Yucaipa,Office Supplies,1,0,0.0
+Bristol,Furniture,2,0,0.0
+Revere,Office Supplies,6,0,0.0
+Mission Viejo,Furniture,1,0,0.0
+Las Vegas,Furniture,2,0,0.0
+Hempstead,Furniture,3,0,0.0
+Hempstead,Technology,2,0,0.0
+Conroe,Office Supplies,1,0,0.0
+Richmond,Technology,16,2,12.5
+Tinley Park,Furniture,1,0,0.0
+Dubuque,Office Supplies,1,0,0.0
+Dubuque,Furniture,1,1,100.0
+Inglewood,Furniture,3,0,0.0
+Revere,Furniture,1,0,0.0
+Dearborn Heights,Furniture,1,0,0.0
+Dearborn Heights,Technology,1,0,0.0
+Overland Park,Technology,1,0,0.0
+Santa Fe,Technology,1,0,0.0
+Mobile,Furniture,3,1,33.33
+Hickory,Technology,1,0,0.0
+Carol Stream,Furniture,2,0,0.0
+Carol Stream,Office Supplies,3,0,0.0
+Saint Cloud,Technology,2,0,0.0
+Saint Cloud,Furniture,1,0,0.0
+Plano,Office Supplies,7,0,0.0
+Plano,Furniture,3,0,0.0
+Fayetteville,Technology,5,0,0.0
+Sacramento,Office Supplies,6,1,16.67
+Orlando,Technology,3,0,0.0
+College Station,Office Supplies,2,0,0.0
+North Miami,Office Supplies,2,0,0.0
+Bakersfield,Office Supplies,10,0,0.0
+Lancaster,Technology,9,2,22.22
+Macon,Furniture,1,0,0.0
+Plantation,Office Supplies,5,0,0.0
+Plantation,Furniture,4,0,0.0
+Clinton,Furniture,7,0,0.0
+Port Saint Lucie,Office Supplies,2,0,0.0
+Toledo,Furniture,3,0,0.0
+Mesquite,Furniture,1,0,0.0
+Mesquite,Technology,1,0,0.0
+Rock Hill,Office Supplies,1,0,0.0
+Inglewood,Technology,2,0,0.0
+Odessa,Office Supplies,3,0,0.0
+Odessa,Furniture,2,0,0.0
+West Allis,Furniture,1,0,0.0
+West Allis,Office Supplies,1,0,0.0
+Chula Vista,Furniture,1,0,0.0
+Manhattan,Technology,1,0,0.0
+Fort Lauderdale,Technology,4,0,0.0
+Altoona,Office Supplies,2,0,0.0
+Greensboro,Furniture,4,0,0.0
+Greensboro,Technology,2,1,50.0
+Plantation,Technology,2,0,0.0
+Rockford,Office Supplies,8,0,0.0
+Thornton,Technology,3,0,0.0
+Champaign,Furniture,1,0,0.0
+Lawrence,Technology,7,1,14.29
+Johnson City,Technology,2,0,0.0
+Bloomington,Technology,2,0,0.0
+Texarkana,Technology,1,0,0.0
+Edinburg,Office Supplies,3,0,0.0
+Baytown,Office Supplies,1,0,0.0
+Pearland,Technology,1,0,0.0
+Harlingen,Furniture,1,0,0.0
+Bakersfield,Technology,1,0,0.0
+Greenwood,Furniture,1,1,100.0
+Nashville,Furniture,4,0,0.0
+Woonsocket,Furniture,1,0,0.0
+Kenosha,Furniture,3,0,0.0
+Kenosha,Office Supplies,1,0,0.0
+Port Saint Lucie,Furniture,1,0,0.0
+Superior,Office Supplies,7,0,0.0
+Bedford,Office Supplies,4,0,0.0
+Bedford,Technology,1,0,0.0
+Lafayette,Technology,4,1,25.0
+Covington,Office Supplies,2,0,0.0
+Covington,Technology,1,0,0.0
+Indianapolis,Technology,4,0,0.0
+Broken Arrow,Technology,1,0,0.0
+Miramar,Furniture,3,0,0.0
+Sacramento,Technology,3,0,0.0
+Fremont,Furniture,1,0,0.0
+Hollywood,Office Supplies,9,0,0.0
+Deer Park,Office Supplies,1,0,0.0
+Wichita,Office Supplies,5,0,0.0
+Freeport,Furniture,3,0,0.0
+Santa Ana,Office Supplies,7,0,0.0
+Baltimore,Technology,5,0,0.0
+Mcallen,Office Supplies,14,0,0.0
+Iowa City,Office Supplies,1,0,0.0
+Boise,Furniture,1,0,0.0
+Boise,Technology,2,0,0.0
+Cranston,Office Supplies,8,0,0.0
+Cranston,Furniture,8,1,12.5
+Mishawaka,Office Supplies,1,0,0.0
+Baltimore,Furniture,11,1,9.09
+Moorhead,Technology,1,0,0.0
+Murray,Technology,1,0,0.0
+Port Arthur,Furniture,1,0,0.0
+Port Arthur,Office Supplies,4,0,0.0
+Port Arthur,Technology,1,0,0.0
+Citrus Heights,Furniture,1,0,0.0
+The Colony,Office Supplies,2,0,0.0
+Akron,Technology,5,0,0.0
+Redmond,Technology,3,0,0.0
+Daytona Beach,Technology,1,0,0.0
+Daytona Beach,Office Supplies,2,0,0.0
+Bullhead City,Office Supplies,1,0,0.0
+Bullhead City,Furniture,1,0,0.0
+Portage,Office Supplies,1,0,0.0
+New Rochelle,Furniture,2,0,0.0
+Stockton,Technology,1,0,0.0
+Fargo,Office Supplies,7,0,0.0
+Elkhart,Office Supplies,1,0,0.0
+Elkhart,Technology,1,0,0.0
+San Gabriel,Furniture,2,1,50.0
+San Gabriel,Office Supplies,1,0,0.0
+Highland Park,Technology,1,0,0.0
+Hamilton,Furniture,1,0,0.0
+Margate,Office Supplies,1,0,0.0
+Sandy Springs,Office Supplies,8,0,0.0
+Sandy Springs,Furniture,2,1,50.0
+Sandy Springs,Technology,4,0,0.0
+Westland,Technology,1,0,0.0
+Boise,Office Supplies,1,0,0.0
+Mentor,Furniture,3,0,0.0
+Mentor,Technology,1,0,0.0
+Mentor,Office Supplies,2,0,0.0
+Lawton,Office Supplies,3,0,0.0
+Lawton,Furniture,1,0,0.0
+Hampton,Furniture,4,0,0.0
+Rome,Technology,1,0,0.0
+Rome,Office Supplies,3,0,0.0
+Rome,Furniture,2,0,0.0
+Manteca,Furniture,1,0,0.0
+Providence,Technology,7,2,28.57
+La Crosse,Office Supplies,2,0,0.0
+El Paso,Office Supplies,11,0,0.0
+Lewiston,Office Supplies,3,0,0.0
+Hampton,Office Supplies,6,0,0.0
+Hattiesburg,Technology,2,0,0.0
+Danville,Office Supplies,6,0,0.0
+Danville,Furniture,1,0,0.0
+Newport News,Technology,1,1,100.0
+Pembroke Pines,Office Supplies,8,0,0.0
+Logan,Office Supplies,4,0,0.0
+Logan,Technology,1,0,0.0
+Waterbury,Office Supplies,7,0,0.0
+Waterbury,Furniture,1,0,0.0
+Athens,Office Supplies,4,0,0.0
+Lewiston,Technology,1,0,0.0
+Spokane,Technology,2,0,0.0
+Chula Vista,Office Supplies,2,0,0.0
+Avondale,Technology,3,0,0.0
+Buffalo,Furniture,5,2,40.0
+Colorado Springs,Technology,1,0,0.0
+Marietta,Office Supplies,4,2,50.0
+Eau Claire,Technology,1,0,0.0
+Yuma,Office Supplies,2,0,0.0
+Wausau,Office Supplies,4,0,0.0
+Pasco,Office Supplies,5,0,0.0
+Pasco,Furniture,1,0,0.0
+Oak Park,Office Supplies,1,0,0.0
+Pensacola,Office Supplies,1,0,0.0
+Marietta,Furniture,1,0,0.0
+Marietta,Technology,2,0,0.0
+Parma,Furniture,4,2,50.0
+Gresham,Office Supplies,2,0,0.0
+League City,Office Supplies,4,0,0.0
+League City,Furniture,2,0,0.0
+Gaithersburg,Furniture,1,0,0.0
+Gaithersburg,Technology,1,0,0.0
+Lehi,Technology,2,1,50.0
+Tuscaloosa,Office Supplies,1,0,0.0
+North Las Vegas,Office Supplies,8,2,25.0
+Oklahoma City,Furniture,5,1,20.0
+Vineland,Office Supplies,4,0,0.0
+Moreno Valley,Office Supplies,8,0,0.0
+Georgetown,Technology,1,0,0.0
+Georgetown,Office Supplies,6,0,0.0
+Minneapolis,Technology,1,0,0.0
+Burlington,Furniture,4,2,50.0
+Trenton,Technology,4,0,0.0
+Loveland,Office Supplies,4,0,0.0
+Woonsocket,Office Supplies,3,0,0.0
+Deltona,Furniture,1,0,0.0
+Oceanside,Technology,4,0,0.0
+Anaheim,Furniture,8,1,12.5
+Chandler,Furniture,3,0,0.0
+Helena,Office Supplies,1,0,0.0
+Kirkwood,Office Supplies,1,0,0.0
+Kirkwood,Furniture,1,0,0.0
+Peoria,Technology,4,0,0.0
+Taylor,Furniture,1,0,0.0
+Midland,Furniture,1,0,0.0
+Waco,Office Supplies,5,0,0.0
+Waco,Furniture,1,0,0.0
+Round Rock,Technology,2,0,0.0
+Texarkana,Furniture,1,0,0.0
+Frankfort,Office Supplies,2,0,0.0
+Bethlehem,Furniture,3,0,0.0
+Garland,Furniture,1,0,0.0
+Knoxville,Furniture,9,1,11.11
+Grand Island,Office Supplies,1,0,0.0
+Woodbury,Office Supplies,3,0,0.0
+Park Ridge,Office Supplies,1,0,0.0
+Wichita,Furniture,1,0,0.0
+Oak Park,Furniture,2,0,0.0
+Rogers,Office Supplies,1,0,0.0
+Clovis,Office Supplies,1,0,0.0
+Clovis,Technology,1,0,0.0
+Wichita,Technology,1,0,0.0
+Chandler,Office Supplies,4,0,0.0
+Palm Coast,Furniture,2,0,0.0
+Jupiter,Office Supplies,1,0,0.0
+Olathe,Technology,1,0,0.0
+Olathe,Furniture,1,0,0.0
+Sparks,Office Supplies,2,0,0.0
+Santa Barbara,Office Supplies,4,0,0.0
+Cedar Hill,Office Supplies,2,0,0.0
+Norfolk,Office Supplies,1,0,0.0
+Draper,Furniture,1,0,0.0
+Draper,Technology,2,0,0.0
+La Crosse,Technology,1,0,0.0
+La Crosse,Furniture,2,0,0.0
+Ann Arbor,Office Supplies,3,0,0.0
+La Mesa,Office Supplies,1,0,0.0
+La Mesa,Technology,1,0,0.0
+Morristown,Furniture,1,0,0.0
+Apple Valley,Furniture,2,1,50.0
+Salem,Furniture,4,0,0.0
+Pocatello,Furniture,2,0,0.0
+Pocatello,Technology,2,0,0.0
+Holland,Office Supplies,3,0,0.0
+Broken Arrow,Office Supplies,3,0,0.0
+Athens,Technology,3,1,33.33
+Apopka,Furniture,1,0,0.0
+Ann Arbor,Technology,2,0,0.0
+Madison,Technology,1,0,0.0
+Milford,Furniture,2,0,0.0
+Milford,Office Supplies,3,0,0.0
+Greenville,Technology,4,1,25.0
+Buffalo Grove,Furniture,1,0,0.0
+Hialeah,Technology,3,0,0.0
+Lake Forest,Office Supplies,4,0,0.0
+Lake Forest,Furniture,2,0,0.0
+Redding,Technology,1,0,0.0
+Chico,Office Supplies,5,0,0.0
+Thousand Oaks,Technology,1,0,0.0
+Utica,Technology,3,0,0.0
+Utica,Office Supplies,4,0,0.0
+Roseville,Technology,1,0,0.0
+Conway,Furniture,1,0,0.0
+Meriden,Furniture,1,1,100.0
+Cheyenne,Furniture,1,1,100.0
+Owensboro,Office Supplies,2,0,0.0
+Bellingham,Technology,1,1,100.0
+Reading,Furniture,3,0,0.0
+Hattiesburg,Furniture,2,0,0.0
+Hattiesburg,Office Supplies,5,0,0.0
+Caldwell,Furniture,1,0,0.0
+Caldwell,Office Supplies,2,0,0.0
+New Bedford,Technology,2,0,0.0
+Kenner,Office Supplies,1,0,0.0
+Kenner,Technology,1,0,0.0
+Nashua,Furniture,1,0,0.0
+Georgetown,Furniture,1,0,0.0
+Sierra Vista,Furniture,1,0,0.0
+Bartlett,Office Supplies,1,0,0.0
+Lubbock,Furniture,1,0,0.0
+Redwood City,Office Supplies,1,0,0.0
+Lebanon,Office Supplies,2,0,0.0
+Mcallen,Technology,4,0,0.0
+Santa Maria,Office Supplies,1,0,0.0
+Manchester,Technology,1,0,0.0
+Portland,Furniture,4,0,0.0
+Des Plaines,Technology,1,0,0.0
+Longview,Office Supplies,2,0,0.0
+Hendersonville,Furniture,1,0,0.0
+Hendersonville,Office Supplies,4,0,0.0
+Irving,Technology,1,0,0.0
+Waterloo,Office Supplies,1,0,0.0
+Cambridge,Technology,2,0,0.0
+Cambridge,Office Supplies,3,0,0.0
+Palatine,Technology,1,0,0.0
+Lebanon,Technology,1,0,0.0
+Chico,Furniture,5,0,0.0
+Beverly,Office Supplies,3,1,33.33
+Eugene,Office Supplies,4,0,0.0
+Eugene,Furniture,2,0,0.0
+Oxnard,Furniture,2,0,0.0
+Laguna Niguel,Technology,1,0,0.0
+Laguna Niguel,Office Supplies,2,0,0.0
+Westland,Furniture,2,0,0.0
+Renton,Office Supplies,2,0,0.0
+Renton,Technology,1,1,100.0
+Waterbury,Technology,3,0,0.0
+Spokane,Office Supplies,3,0,0.0
+Pocatello,Office Supplies,3,0,0.0
+Glenview,Technology,1,0,0.0
+Orlando,Furniture,1,0,0.0
+Elmhurst,Furniture,1,0,0.0
+Delray Beach,Office Supplies,2,0,0.0
+Commerce City,Office Supplies,1,0,0.0
+Texas City,Furniture,3,0,0.0
+Wilson,Office Supplies,5,0,0.0
+Virginia Beach,Furniture,5,0,0.0
+Vineland,Technology,1,0,0.0
+Charlottesville,Furniture,1,0,0.0
+Wilson,Furniture,1,0,0.0
+Rio Rancho,Furniture,2,0,0.0
+Skokie,Technology,1,0,0.0
+Hot Springs,Office Supplies,2,0,0.0
+Hot Springs,Furniture,1,0,0.0
+Goldsboro,Office Supplies,1,0,0.0
+Nashua,Office Supplies,1,0,0.0
+Paterson,Furniture,6,0,0.0
+Montebello,Technology,1,0,0.0
+Thousand Oaks,Furniture,1,0,0.0
+Torrance,Technology,1,0,0.0
+El Cajon,Furniture,2,0,0.0
+Beaumont,Office Supplies,2,0,0.0
+Beaumont,Technology,2,0,0.0
+Naperville,Furniture,1,0,0.0
+Huntington Beach,Technology,1,1,100.0
+North Charleston,Furniture,1,0,0.0
+West Palm Beach,Technology,1,0,0.0
+Longview,Furniture,1,0,0.0
+Abilene,Office Supplies,1,0,0.0
+Hampton,Technology,1,0,0.0
+Normal,Furniture,1,0,0.0
+Salinas,Furniture,1,0,0.0
+Nashville,Technology,4,1,25.0
+Saint Charles,Technology,3,0,0.0
+Saint Charles,Furniture,4,0,0.0
+Tuscaloosa,Furniture,1,0,0.0
+Camarillo,Office Supplies,1,0,0.0
+Superior,Furniture,1,0,0.0
+Superior,Technology,1,0,0.0
+Helena,Technology,1,0,0.0
+Helena,Furniture,1,0,0.0
+Yuma,Technology,2,0,0.0
+Bellevue,Furniture,1,0,0.0
+Des Plaines,Furniture,3,0,0.0
+Des Plaines,Office Supplies,2,0,0.0
+San Jose,Technology,3,1,33.33
+Park Ridge,Technology,1,0,0.0
+Hillsboro,Office Supplies,2,0,0.0
+Burbank,Furniture,1,0,0.0
+Burbank,Technology,1,1,100.0
+Burbank,Office Supplies,1,1,100.0
+Modesto,Technology,2,0,0.0
+Garden City,Technology,1,0,0.0
+Camarillo,Furniture,4,0,0.0
+Tigard,Furniture,1,0,0.0
+Oxnard,Office Supplies,6,1,16.67
+Covington,Furniture,1,0,0.0
+Bolingbrook,Technology,1,0,0.0
+Visalia,Office Supplies,3,0,0.0
+Westminster,Office Supplies,8,1,12.5
+Westminster,Furniture,4,0,0.0
+Atlantic City,Office Supplies,1,0,0.0
+Longmont,Furniture,2,0,0.0
+Greenville,Furniture,2,0,0.0
+Newport News,Furniture,1,0,0.0
+Garden City,Office Supplies,4,0,0.0
+Brownsville,Technology,1,0,0.0
+Pueblo,Technology,2,0,0.0
+Bossier City,Furniture,1,0,0.0
+Buffalo,Technology,1,0,0.0
+Riverside,Technology,2,1,50.0
+West Palm Beach,Office Supplies,2,0,0.0
+Cuyahoga Falls,Office Supplies,2,0,0.0
+Thornton,Office Supplies,4,0,0.0
+Thornton,Furniture,3,0,0.0
+Davis,Office Supplies,1,0,0.0
+Wheeling,Office Supplies,4,0,0.0
+Memphis,Technology,1,0,0.0
+Morgan Hill,Furniture,2,0,0.0
+Morgan Hill,Office Supplies,2,0,0.0
+Hollywood,Technology,1,0,0.0
+Chico,Technology,1,0,0.0
+Miramar,Office Supplies,5,0,0.0
+Clifton,Office Supplies,1,0,0.0
+Clifton,Furniture,1,0,0.0
+Sheboygan,Office Supplies,3,0,0.0
+Sheboygan,Technology,1,0,0.0
+Boca Raton,Technology,1,0,0.0
+Dubuque,Technology,1,0,0.0
+Cambridge,Furniture,1,0,0.0
+East Point,Furniture,1,0,0.0
+East Point,Office Supplies,1,0,0.0
+East Point,Technology,1,0,0.0
+San Angelo,Office Supplies,1,0,0.0
+Modesto,Furniture,1,0,0.0
+Rapid City,Office Supplies,1,0,0.0
+Rapid City,Furniture,1,0,0.0
+Middletown,Technology,1,0,0.0
+Milford,Technology,1,0,0.0
+Rockville,Office Supplies,2,0,0.0
+Durham,Furniture,1,0,0.0
+Knoxville,Technology,1,0,0.0
+Daytona Beach,Furniture,1,0,0.0
+Saint Charles,Office Supplies,3,0,0.0
+Andover,Office Supplies,3,0,0.0
+Andover,Furniture,1,0,0.0
+Athens,Furniture,1,0,0.0
+Kissimmee,Technology,1,0,0.0
+Pompano Beach,Office Supplies,1,0,0.0
+Shelton,Technology,1,0,0.0
+Shelton,Office Supplies,1,0,0.0
+Danbury,Furniture,1,0,0.0
+Noblesville,Furniture,1,1,100.0
+Clarksville,Furniture,2,0,0.0
+Clarksville,Technology,1,0,0.0
+Lubbock,Technology,1,0,0.0
+Longmont,Technology,1,0,0.0
+Frisco,Furniture,1,0,0.0
+Sanford,Office Supplies,1,0,0.0
+Sanford,Furniture,1,0,0.0
+The Colony,Technology,1,0,0.0
+San Marcos,Furniture,1,0,0.0
+San Marcos,Office Supplies,2,0,0.0
+San Marcos,Technology,1,0,0.0
+Greeley,Office Supplies,1,0,0.0
+Greeley,Furniture,1,0,0.0
+Reno,Technology,1,0,0.0
+Oxnard,Technology,1,0,0.0
+Bethlehem,Office Supplies,2,1,50.0
+Mansfield,Furniture,1,0,0.0
+Elyria,Office Supplies,1,0,0.0
+Murfreesboro,Technology,2,0,0.0
+Chattanooga,Office Supplies,3,0,0.0
+Hillsboro,Furniture,1,0,0.0
+Hillsboro,Technology,1,0,0.0
+Twin Falls,Office Supplies,1,0,0.0
+Twin Falls,Furniture,1,1,100.0
+Utica,Furniture,1,0,0.0
+Morristown,Technology,1,0,0.0
+Durham,Technology,1,0,0.0
+Stockton,Furniture,1,0,0.0
+Chattanooga,Technology,3,0,0.0
+Coral Gables,Technology,1,0,0.0
+Coral Gables,Furniture,1,0,0.0
+Hickory,Office Supplies,1,0,0.0
+Rockford,Technology,1,1,100.0
+Green Bay,Furniture,2,0,0.0
+Romeoville,Office Supplies,1,0,0.0
+Marlborough,Furniture,2,0,0.0
+Hollywood,Furniture,1,0,0.0
+Sunnyvale,Office Supplies,3,0,0.0
+Sunnyvale,Technology,2,0,0.0
+Harrisonburg,Technology,1,0,0.0
+Haltom City,Technology,1,0,0.0
+Laurel,Furniture,1,0,0.0
+Laurel,Office Supplies,1,0,0.0
+Buffalo Grove,Technology,1,0,0.0
+Las Vegas,Technology,1,1,100.0
+Avondale,Office Supplies,3,0,0.0
+Bangor,Office Supplies,2,0,0.0
+Eau Claire,Furniture,2,0,0.0
+Allentown,Technology,1,0,0.0
+Perth Amboy,Furniture,1,0,0.0
+Bryan,Office Supplies,5,0,0.0
+Pine Bluff,Technology,1,0,0.0
+Pine Bluff,Office Supplies,1,0,0.0
+Aberdeen,Office Supplies,1,0,0.0
+Delray Beach,Technology,1,0,0.0
+Hagerstown,Office Supplies,1,0,0.0
+Mcallen,Furniture,1,0,0.0
+Santa Fe,Office Supplies,1,0,0.0
+Moreno Valley,Furniture,2,0,0.0
+East Orange,Technology,1,0,0.0
+Arlington Heights,Office Supplies,1,0,0.0
+Coppell,Technology,1,0,0.0
+Oswego,Office Supplies,3,0,0.0
+Broken Arrow,Furniture,1,1,100.0
+Mission Viejo,Technology,1,0,0.0
+Greenwood,Office Supplies,3,0,0.0
+Dearborn Heights,Office Supplies,4,0,0.0
+Appleton,Technology,1,1,100.0
+Fremont,Technology,1,0,0.0
+Mansfield,Office Supplies,1,0,0.0
+Woodland,Technology,1,0,0.0
+Coon Rapids,Office Supplies,1,0,0.0
+Coon Rapids,Technology,1,0,0.0
+Santa Barbara,Technology,3,1,33.33
+San Clemente,Office Supplies,2,0,0.0
+San Luis Obispo,Office Supplies,1,0,0.0
+Springdale,Office Supplies,1,0,0.0
+Lodi,Office Supplies,2,0,0.0
+East Orange,Office Supplies,4,0,0.0
+Beaumont,Furniture,1,0,0.0
+Mason,Furniture,1,0,0.0
+Mason,Office Supplies,2,0,0.0
+Woodstock,Technology,1,0,0.0
+Santa Barbara,Furniture,1,0,0.0
+Bryan,Furniture,1,0,0.0
+San Bernardino,Furniture,1,0,0.0
+Niagara Falls,Technology,1,0,0.0
+Indianapolis,Furniture,1,1,100.0
+Grand Rapids,Technology,1,0,0.0
