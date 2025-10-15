@@ -6,22 +6,28 @@ import csv
 #email: carmelat@umich.edu
 #collaborators: Kristen May & Katia Hemphill; GenAI to help debug, explain some function logic, and help with expected values for test cases
 
+# def get_data(file):
+#     data = []
+#     # inFile = open(file)
+#     # csv_file = csv.reader(inFile)
+
+#     # headers = next(csv_file)
+#     # for row in csv_file:
+#     #     data.append(row)
+
+#     # inFile.close()
+#     # return headers, data #chat explained why i need to return headers
+#     with open(file) as fn:
+#         csv_file = csv.reader(fn)
+#         headers = next(csv_file)
+#         for row in csv_file:
+#             data.append(row)
+#     return data
+
 def get_data(file):
-    data = []
-    # inFile = open(file)
-    # csv_file = csv.reader(inFile)
-
-    # headers = next(csv_file)
-    # for row in csv_file:
-    #     data.append(row)
-
-    # inFile.close()
-    # return headers, data #chat explained why i need to return headers
     with open(file) as fn:
-        csv_file = csv.reader(fn)
-        headers = next(csv_file)
-        for row in csv_file:
-            data.append(row)
+        csv_reader = csv.DictReader(fn)
+        data = [row for row in csv_reader]
     return data
 
 column_dict = {
@@ -34,9 +40,12 @@ def calc_sales_by_shipmode_segment(data, column_dict):
     results = {}
 
     for row in data:
-        segment = row[column_dict['Segment']]
-        ship_mode = row[column_dict['Ship Mode']]
-        sales = row[column_dict['Sales']]
+        # segment = row[column_dict['Segment']]
+        # ship_mode = row[column_dict['Ship Mode']]
+        # sales = row[column_dict['Sales']]
+        segment = row['Segment']
+        ship_mode = row['Ship Mode']
+        sales = row['Sales']
 
         # checks if any column is blank, then skips
         if segment == "" or ship_mode == "" or sales == "":
@@ -70,9 +79,13 @@ def calc_highvaluepercentage_city_category(data, column_dict):
     highsales_threshold = 1000
 
     for row in data:
-        city = row[column_dict['City']]
-        category = row[column_dict['Category']]
-        sales = row[column_dict['Sales']]
+        # city = row[column_dict['City']]
+        # category = row[column_dict['Category']]
+        # sales = row[column_dict['Sales']]
+
+        city = row['City']
+        category = row['Category']
+        sales = row['Sales']
 
         if city == "" or category == "" or sales =="":
             continue
