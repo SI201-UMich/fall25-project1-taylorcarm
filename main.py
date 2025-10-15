@@ -4,7 +4,8 @@ import csv
 #name: Carmela Taylor
 #umid: 58771562
 #email: carmelat@umich.edu
-#collaborators: Kristen May & Katia Hemphill; GenAI to help debug, explain some function logic, and help with expected values for test cases
+#collaborators: Kristen May & Katia Hemphill 
+#GenAI to help debug, explain some function logic, and help with expected values for test cases
 
 # def get_data(file):
 #     data = []
@@ -39,19 +40,38 @@ column_dict = {
 def calc_sales_by_shipmode_segment(data, column_dict):
     results = {}
 
+    # for row in data:
+    #     if isinstance(row, dict):
+    #         segment = row.get('Segment', "")
+    #         ship_mode = row.get('Ship Mode', "")
+    #         sales = row.get('Sales', "")
+    #     else:
+    #         segment = row[column_dict['Segment']]
+    #         ship_mode = row[column_dict['Ship Mode']]
+    #         sales = row[column_dict['Sales']]
+
     for row in data:
         # segment = row[column_dict['Segment']]
         # ship_mode = row[column_dict['Ship Mode']]
         # sales = row[column_dict['Sales']]
-        segment = row['Segment']
-        ship_mode = row['Ship Mode']
-        sales = row['Sales']
+        # for dictionaries:
+        # segment = row['Segment']
+        # ship_mode = row['Ship Mode']
+        # sales = row['Sales']
+        if isinstance(row, dict):
+            segment = row.get('Segment', "")
+            ship_mode = row.get('Ship Mode', "")
+            sales = row.get('Sales', "")
+        else:
+            segment = row[column_dict['Segment']]
+            ship_mode = row[column_dict['Ship Mode']]
+            sales = row[column_dict['Sales']]
 
         # checks if any column is blank, then skips
         if segment == "" or ship_mode == "" or sales == "":
             continue
 
-        # make sure sales is a valid number so later i can be made a float
+        # make sure sales is a valid number so later it can be made a float (this was a problem in tests)
         if sales.replace('.', '', 1).isdigit() == False:
             continue
 
@@ -71,21 +91,31 @@ def calc_sales_by_shipmode_segment(data, column_dict):
             results[segment][ship_mode] = round(results[segment][ship_mode], 3)
 
     return results
-    #pass
 
 def calc_highvaluepercentage_city_category(data, column_dict):
     results = []
     counts = {}
     highsales_threshold = 1000
 
+
     for row in data:
         # city = row[column_dict['City']]
         # category = row[column_dict['Category']]
         # sales = row[column_dict['Sales']]
 
-        city = row['City']
-        category = row['Category']
-        sales = row['Sales']
+        # for dictionaries
+        # city = row['City']
+        # category = row['Category']
+        # sales = row['Sales']
+
+        if isinstance(row, dict):
+            city = row.get('City', "")
+            category = row.get('Category', "")
+            sales = row.get('Sales', "")
+        else:
+            city = row[column_dict['City']]
+            category = row[column_dict['Category']]
+            sales = row[column_dict['Sales']]
 
         if city == "" or category == "" or sales =="":
             continue
