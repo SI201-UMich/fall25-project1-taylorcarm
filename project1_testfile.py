@@ -3,6 +3,7 @@ import os
 import csv
 from main import calc_sales_by_shipmode_segment, calc_highvaluepercentage_city_category
 
+
 class CalculationTests(unittest.TestCase):
     def setUp(self):
         self.column_dict = {
@@ -12,11 +13,10 @@ class CalculationTests(unittest.TestCase):
         }
 
     def test_calc_sales_by_shipmode_segment_1(self):
-        # test that it returns a nested dictionary with the segment, shipping class, and sale
         data = [
-            ["Second Class", "Consumer", "", "", "", "", "", "", "", "100.0", "", "", ""],
-            ["First Class", "Consumer", "", "", "", "", "", "", "", "200.0", "", "", ""],
-            ["Second Class", "Corporate", "", "", "", "", "", "", "", "300.0", "", "", ""],
+            {"Ship Mode": "Second Class", "Segment": "Consumer", "Sales": "100.0"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Sales": "200.0"},
+            {"Ship Mode": "Second Class", "Segment": "Corporate", "Sales": "300.0"}
         ]
         expected = {
             "Consumer": {"Second Class": 100.0, "First Class": 200.0},
@@ -25,48 +25,39 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_2(self):
-        # check that it adds the data from multiple rows
         data = [
-            ["Standard Class","Corporate","United States","New York City","New York","10024","East","Technology","Phones","1029.95","5","0","298.6855"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Office Supplies","Storage","208.56","6","0","52.14"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Office Supplies","Paper","32.4","5","0","15.552"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Furniture","Chairs","319.41","5","0.1","7.098"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Office Supplies","Paper","14.56","2","0","6.9888"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Technology","Accessories","30","2","0","3.3"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Office Supplies","Binders","48.48","4","0.2","16.362"],
-            ["First Class","Consumer","United States","Troy","New York","12180","East","Office Supplies","Art","1.68","1","0","0.84"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90004","West","Technology","Accessories","13.98","2","0","6.1512"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90004","West","Office Supplies","Binders","25.824","6","0.2","9.3612"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90004","West","Office Supplies","Paper","146.73","3","0","68.9631"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90004","West","Furniture","Furnishings","79.76","4","0","22.3328"]
+            {"Ship Mode": "Standard Class", "Segment": "Corporate", "Country": "United States", "City": "New York City", "State": "New York", "Region": "East", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1029.95"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "208.56"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "32.4"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "319.41"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "14.56"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "30"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "48.48"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Art", "Sales": "1.68"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "Country": "United States", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "13.98"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "Country": "United States", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "25.824"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "Country": "United States", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "146.73"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "Country": "United States", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Furniture", "Sub-Category": "Furnishings", "Sales": "79.76"}
         ]
-        expected = {
-            "Corporate": {"Standard Class": 1029.95},
-            "Consumer": {"First Class": 655.09, "Standard Class": 266.294}
-        }
-        #self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
         result = calc_sales_by_shipmode_segment(data, self.column_dict)
         self.assertAlmostEqual(result["Consumer"]["First Class"], 655.09, places=2)
         self.assertAlmostEqual(result["Consumer"]["Standard Class"], 266.294, places=2)
         self.assertAlmostEqual(result["Corporate"]["Standard Class"], 1029.95, places=2)
 
     def test_calc_sales_by_shipmode_segment_empty(self):
-        # checks if the data is empty
         data = []
         expected = {}
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_4(self):
-        # check three different shipping modes and different segments
         data = [
-            ["Standard Class", "Corporate", "United States", "Mesa", "Arizona", "85204", "West", "Office Supplies", "Paper", "86.272", "4", "0.2", "31.2736"],
-            ["Standard Class", "Corporate", "United States", "Mesa", "Arizona", "85204", "West", "Technology", "Phones", "263.96", "5", "0.2", "23.0965"],
-            ["Second Class", "Corporate", "United States", "Salinas", "California", "93905", "West", "Office Supplies", "Labels", "427.42", "14", "0", "196.6132"],
-            ["First Class", "Consumer", "United States", "Jackson", "Mississippi", "39212", "South", "Office Supplies", "Paper", "19.44", "3", "0", "9.3312"],
-            ["Standard Class", "Consumer", "United States", "New York City", "New York", "10024", "East", "Office Supplies", "Art", "75.48", "2", "0", "19.6248"],
-            ["Standard Class", "Consumer", "United States", "New York City", "New York", "10024", "East", "Furniture", "Furnishings", "39.98", "2", "0", "9.995"]
+            {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Mesa", "State": "Arizona", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "86.272"},
+            {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Mesa", "State": "Arizona", "Region": "West", "Category": "Technology", "Sub-Category": "Phones", "Sales": "263.96"},
+            {"Ship Mode": "Second Class", "Segment": "Corporate", "City": "Salinas", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Labels", "Sales": "427.42"},
+            {"Ship Mode": "First Class", "Segment": "Consumer", "City": "Jackson", "State": "Mississippi", "Region": "South", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "19.44"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "New York City", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Art", "Sales": "75.48"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "New York City", "State": "New York", "Region": "East", "Category": "Furniture", "Sub-Category": "Furnishings", "Sales": "39.98"}
         ]
-
         expected = {
             "Corporate": {"Standard Class": 350.232, "Second Class": 427.42},
             "Consumer": {"First Class": 19.44, "Standard Class": 115.46}
@@ -74,65 +65,57 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_5(self):
-        # check all same segment and shipping mode
         data = [
-            ["Standard Class", "Consumer", "United States", "Trenton", "Michigan", "48183", "Central", "Office Supplies", "Binders", "58.05", "3", "0", "26.703"],
-            ["Standard Class", "Consumer", "United States", "Trenton", "Michigan", "48183", "Central", "Office Supplies", "Art", "56.98", "7", "0", "22.792"],
-            ["Standard Class", "Consumer", "United States", "Trenton", "Michigan", "48183", "Central", "Furniture", "Furnishings", "157.74", "11", "0", "56.7864"],
-            ["Standard Class", "Consumer", "United States", "Dallas", "Texas", "75220", "Central", "Office Supplies", "Paper", "3.528", "1", "0.2", "1.1466"],
-            ["Standard Class", "Consumer", "United States", "Dallas", "Texas", "75220", "Central", "Office Supplies", "Paper", "4.624", "1", "0.2", "1.6762"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Trenton", "State": "Michigan", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "58.05"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Trenton", "State": "Michigan", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Art", "Sales": "56.98"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Trenton", "State": "Michigan", "Region": "Central", "Category": "Furniture", "Sub-Category": "Furnishings", "Sales": "157.74"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "3.528"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "4.624"}
         ]
-
-        expected = {
-            "Consumer": {"Standard Class": 280.922}  # 58.05 + 56.98 + 157.74 + 3.528 + 4.624
-        }
+        expected = {"Consumer": {"Standard Class": 280.922}}
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_multiple_segments_6(self):
-        # mized segments, same shipping mode
         data = [
-            ["Same Day", "Corporate", "United States", "San Diego", "California", "92105", "West", "Furniture", "Tables", "567.12", "10", "0.2", "-28.356"],
-            ["Same Day", "Home Office", "United States", "Smyrna", "Georgia", "30080", "South", "Technology", "Phones", "484.83", "3", "0", "126.0558"],
-            ["Same Day", "Home Office", "United States", "Smyrna", "Georgia", "30080", "South", "Office Supplies", "Paper", "122.97", "3", "0", "60.2553"],
-            ["Same Day", "Home Office", "United States", "Smyrna", "Georgia", "30080", "South", "Office Supplies", "Storage", "154.44", "3", "0", "1.5444"],
-            ["Same Day", "Consumer", "United States", "Redlands", "California", "92374", "West", "Office Supplies", "Paper", "19.98", "1", "0", "9.3906"],
-            ["Same Day", "Consumer", "United States", "Redlands", "California", "92374", "West", "Office Supplies", "Art", "5.04", "3", "0", "1.26"]
+            {"Ship Mode": "Same Day", "Segment": "Corporate", "City": "San Diego", "State": "California", "Region": "West", "Category": "Furniture", "Sub-Category": "Tables", "Sales": "567.12"},
+            {"Ship Mode": "Same Day", "Segment": "Home Office", "City": "Smyrna", "State": "Georgia", "Region": "South", "Category": "Technology", "Sub-Category": "Phones", "Sales": "484.83"},
+            {"Ship Mode": "Same Day", "Segment": "Home Office", "City": "Smyrna", "State": "Georgia", "Region": "South", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "122.97"},
+            {"Ship Mode": "Same Day", "Segment": "Home Office", "City": "Smyrna", "State": "Georgia", "Region": "South", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "154.44"},
+            {"Ship Mode": "Same Day", "Segment": "Consumer", "City": "Redlands", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "19.98"},
+            {"Ship Mode": "Same Day", "Segment": "Consumer", "City": "Redlands", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Art", "Sales": "5.04"}
         ]
-       
         expected = {
             "Corporate": {"Same Day": 567.12},
-            "Home Office": {"Same Day": 762.24},  # 484.83 + 122.97 + 154.44
-            "Consumer": {"Same Day": 25.02}       # 19.98 + 5.04
+            "Home Office": {"Same Day": 762.24},
+            "Consumer": {"Same Day": 25.02}
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_bad_data(self):
-        # missing data
         data = [
-            ["Standard Class", "Corporate", "United States", "Green Bay", "Wisconsin", "54302", "Central", "Office Supplies", "Paper", "22.72", "4", "0", "10.224"],
-            ["", "Consumer", "United States", "Los Angeles", "California", "90036", "West", "Furniture", "Furnishings", "", "2", "0", "5.4"],  # missing ship mode and sales
-            ["Second Class", "Home Office", "United States", "Costa Mesa", "California", "92627", "West", "Technology", "Accessories", "239.97", "3", "0", "26.3967"],
-            ["First Class", "Corporate", "United States", "Houston", "Texas", "77041", "Central", "Technology", "Phones", "946.344", "7", "0.2", "118.293"],
-            ["Standard Class", "Consumer", "United States", "Dallas", "Texas", "75220", "Central", "Office Supplies", "Supplies", "51.52", "5", "0.2", "-10.948"],
-            ["Second Class", "Consumer", "United States", "Tulsa", "Oklahoma", "74133", "Central", "Office Supplies", "Binders", "42.81", "3", "0", "20.1207"],
-            ["Second Class", "Consumer", "United States", "Tulsa", "Oklahoma", "74133", "Central", "Office Supplies", "Paper", "12.96", "2", "0", "6.2208"]
+            {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Green Bay", "State": "Wisconsin", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "22.72"},
+            {"Ship Mode": "", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Furniture", "Sub-Category": "Furnishings", "Sales": ""},
+            {"Ship Mode": "Second Class", "Segment": "Home Office", "City": "Costa Mesa", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "239.97"},
+            {"Ship Mode": "First Class", "Segment": "Corporate", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "946.344"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Supplies", "Sales": "51.52"},
+            {"Ship Mode": "Second Class", "Segment": "Consumer", "City": "Tulsa", "State": "Oklahoma", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "42.81"},
+            {"Ship Mode": "Second Class", "Segment": "Consumer", "City": "Tulsa", "State": "Oklahoma", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "12.96"}
         ]
-        
         expected = {
             "Corporate": {"Standard Class": 22.72, "First Class": 946.344},
             "Home Office": {"Second Class": 239.97},
-            "Consumer": {"Standard Class": 51.52, "Second Class": 55.77}  # 42.81 + 12.96
+            "Consumer": {"Standard Class": 51.52, "Second Class": 55.77}
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
-    
-    ###
-    # tests for calchighvaluepercentagecitycategory
+
+    # --- High Value Percentage Tests ---
+
     def test_highvalue_1(self):
         # there are 0 high value sales
         data = [
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Binders","26.046","3","0.8","-44.2782"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Storage","32.544","2","0.2","-7.7292"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Technology","Phones","122.92","7","0.2","46.095"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "26.046"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "32.544"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "122.92"}
         ]
         expected = [
             {'city': 'Houston', 'category': 'Office Supplies', 'total_sales': 2, 'high_value_sales': 0, 'high_value_percentage': 0.0},
@@ -141,11 +124,10 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_calc_highvalue_2(self):
-        # some high value sales
         data = [
-            ["Standard Class","Consumer","United States","Los Angeles","California","90032","West","Technology","Copiers","3359.952","6","0.2","1049.985"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90008","West","Office Supplies","Paper","42.8","10","0","19.26"],
-            ["Standard Class","Consumer","United States","Los Angeles","California","90008","West","Technology","Accessories","248.85","5","0","27.3735"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Copiers", "Sales": "3359.952"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "42.8"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "248.85"}
         ]
         expected = [
             {'city': 'Los Angeles', 'category': 'Technology', 'total_sales': 2, 'high_value_sales': 1, 'high_value_percentage': 50.0},
@@ -154,11 +136,10 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_calc_highvalue_3(self):
-        # all sales are high value
         data = [
-            ["Same Day","Corporate","United States","San Francisco","California","94122","West","Technology","Machines","1919.976","3","0.2","215.9973"],
-            ["Second Class","Corporate","United States","Provo","Utah","84604","West","Furniture","Bookcases","1292.94","3","0","77.5764"],
-            ["First Class","Home Office","United States","New York City","New York","10035","East","Technology","Machines","1704.89","11","0","767.2005"]
+            {"Ship Mode": "Same Day", "Segment": "Corporate", "City": "San Francisco", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Machines", "Sales": "1919.976"},
+            {"Ship Mode": "Second Class", "Segment": "Corporate", "City": "Provo", "State": "Utah", "Region": "West", "Category": "Furniture", "Sub-Category": "Bookcases", "Sales": "1292.94"},
+            {"Ship Mode": "First Class", "Segment": "Home Office", "City": "New York City", "State": "New York", "Region": "East", "Category": "Technology", "Sub-Category": "Machines", "Sales": "1704.89"}
         ]
         expected = [
             {'city': 'San Francisco', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
@@ -168,82 +149,74 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_highvalue_4(self):
-        # multiple cities
         data = [
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","1500","2","0","200"],
-            ["Standard Class","Consumer","United States","Dallas","Texas","75201","Central","Technology","Phones","3000","1","0","500"],
-            ["Standard Class","Consumer","United States","Dallas","Texas","75201","Central","Furniture","Tables","700","3","0","50"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "1500"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "3000"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Tables", "Sales": "700"}
         ]
-
         expected = [
             {'city': 'Houston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
             {'city': 'Dallas', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0},
             {'city': 'Dallas', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
         ]
-
         result = calc_highvaluepercentage_city_category(data, self.column_dict)
         self.assertEqual(result, expected)
 
     def test_highvalue_5(self):
-        # bad data (missing city, etc)
         data = [
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","abc","2","0","200"],
-            ["Standard Class","Consumer","United States","","Texas","77095","Central","Technology","Phones","1500","3","0","200"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","","Storage","2000","1","0","200"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "abc"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1500"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "", "Sub-Category": "Storage", "Sales": "2000"}
         ]
-
         expected = []
-
         result = calc_highvaluepercentage_city_category(data, self.column_dict)
         self.assertEqual(result, expected)
 
     def test_highvalue_6(self):
-        # same city
         data = [
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Binders","26.046","3","0.8","-44.2782"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Office Supplies","Storage","32.544","2","0.2","-7.7292"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Technology","Phones","122.92","7","0.2","46.095"],
-            ["Standard Class","Consumer","United States","Houston","Texas","77095","Central","Furniture","Chairs","1500","2","0","200"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "26.046"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "32.544"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "122.92"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "1500"}
         ]
-
         expected = [
             {'city': 'Houston', 'category': 'Office Supplies', 'total_sales': 2, 'high_value_sales': 0, 'high_value_percentage': 0.0},
             {'city': 'Houston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0},
             {'city': 'Houston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0}
         ]
-
         result = calc_highvaluepercentage_city_category(data, self.column_dict)
         self.assertEqual(result, expected)
 
     def test_highvalue_7(self):
-    # some correct sales values and some invalid sales values
         data = [
-            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Technology","Phones","1,500","3","0","200"],  # comma in sales
-            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Furniture","Chairs","950","1","0","80"],
-            ["Standard Class","Consumer","United States","Chicago","Illinois","60610","Central","Office Supplies","Paper","NaN","2","0","10"]  # NaN in sales column
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Chicago", "State": "Illinois", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1,500"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Chicago", "State": "Illinois", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "950"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Chicago", "State": "Illinois", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "NaN"}
         ]
-
         expected = [
             {'city': 'Chicago', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0}
         ]
-
         result = calc_highvaluepercentage_city_category(data, self.column_dict)
         self.assertEqual(result, expected)
 
     def test_highvalue_8(self):
-    # sales exactly equal to 1000 
         data = [
-            ["Standard Class","Consumer","United States","Boston","Massachusetts","02108","East","Technology","Accessories","1000","2","0","100"],
-            ["Standard Class","Consumer","United States","Boston","Massachusetts","02108","East","Furniture","Tables","1200","1","0","200"]
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Boston", "State": "Massachusetts", "Region": "East", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "1000"},
+            {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Boston", "State": "Massachusetts", "Region": "East", "Category": "Furniture", "Sub-Category": "Tables", "Sales": "1200"}
         ]
-
         expected = [
             {'city': 'Boston', 'category': 'Technology', 'total_sales': 1, 'high_value_sales': 0, 'high_value_percentage': 0.0},
             {'city': 'Boston', 'category': 'Furniture', 'total_sales': 1, 'high_value_sales': 1, 'high_value_percentage': 100.0}
         ]
-
         result = calc_highvaluepercentage_city_category(data, self.column_dict)
         self.assertEqual(result, expected)
+
+
+def main():
+    unittest.main(verbosity=2)
+
+if __name__ == '__main__':
+    main()
 
 
 
