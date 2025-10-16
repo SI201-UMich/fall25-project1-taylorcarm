@@ -13,6 +13,7 @@ class CalculationTests(unittest.TestCase):
         }
 
     def test_calc_sales_by_shipmode_segment_1(self):
+        # # test that it returns a nested dictionary with the segment, shipping class, and sale
         data = [
             {"Ship Mode": "Second Class", "Segment": "Consumer", "Sales": "100.0"},
             {"Ship Mode": "First Class", "Segment": "Consumer", "Sales": "200.0"},
@@ -25,6 +26,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_2(self):
+        # check that it adds the data from multiple rows
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Corporate", "Country": "United States", "City": "New York City", "State": "New York", "Region": "East", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1029.95"},
             {"Ship Mode": "First Class", "Segment": "Consumer", "Country": "United States", "City": "Troy", "State": "New York", "Region": "East", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "208.56"},
@@ -50,6 +52,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_4(self):
+        # check three different shipping modes and segments
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Mesa", "State": "Arizona", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "86.272"},
             {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Mesa", "State": "Arizona", "Region": "West", "Category": "Technology", "Sub-Category": "Phones", "Sales": "263.96"},
@@ -65,6 +68,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_5(self):
+        # all same segment and shipping mode
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Trenton", "State": "Michigan", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "58.05"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Trenton", "State": "Michigan", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Art", "Sales": "56.98"},
@@ -76,6 +80,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_multiple_segments_6(self):
+        # mized segments, same shipping mode
         data = [
             {"Ship Mode": "Same Day", "Segment": "Corporate", "City": "San Diego", "State": "California", "Region": "West", "Category": "Furniture", "Sub-Category": "Tables", "Sales": "567.12"},
             {"Ship Mode": "Same Day", "Segment": "Home Office", "City": "Smyrna", "State": "Georgia", "Region": "South", "Category": "Technology", "Sub-Category": "Phones", "Sales": "484.83"},
@@ -92,6 +97,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
     def test_calc_sales_by_shipmode_segment_bad_data(self):
+        # missing data
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Corporate", "City": "Green Bay", "State": "Wisconsin", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "22.72"},
             {"Ship Mode": "", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Furniture", "Sub-Category": "Furnishings", "Sales": ""},
@@ -108,7 +114,7 @@ class CalculationTests(unittest.TestCase):
         }
         self.assertEqual(calc_sales_by_shipmode_segment(data, self.column_dict), expected)
 
-    # --- High Value Percentage Tests ---
+    # High Value Percentage Tests
 
     def test_highvalue_1(self):
         # there are 0 high value sales
@@ -124,6 +130,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_calc_highvalue_2(self):
+        # some high value sales
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Copiers", "Sales": "3359.952"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Los Angeles", "State": "California", "Region": "West", "Category": "Office Supplies", "Sub-Category": "Paper", "Sales": "42.8"},
@@ -136,6 +143,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_calc_highvalue_3(self):
+        # all sales are high value
         data = [
             {"Ship Mode": "Same Day", "Segment": "Corporate", "City": "San Francisco", "State": "California", "Region": "West", "Category": "Technology", "Sub-Category": "Machines", "Sales": "1919.976"},
             {"Ship Mode": "Second Class", "Segment": "Corporate", "City": "Provo", "State": "Utah", "Region": "West", "Category": "Furniture", "Sub-Category": "Bookcases", "Sales": "1292.94"},
@@ -149,6 +157,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(calc_highvaluepercentage_city_category(data, self.column_dict), expected)
 
     def test_highvalue_4(self):
+        # multiple cities
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "1500"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Dallas", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "3000"},
@@ -163,6 +172,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_highvalue_5(self):
+        # bad data (missing city, etc)
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "abc"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "", "State": "Texas", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1500"},
@@ -173,6 +183,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_highvalue_6(self):
+        # same city
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Binders", "Sales": "26.046"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Houston", "State": "Texas", "Region": "Central", "Category": "Office Supplies", "Sub-Category": "Storage", "Sales": "32.544"},
@@ -188,6 +199,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_highvalue_7(self):
+        # some correct sales values and some invalid sales values
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Chicago", "State": "Illinois", "Region": "Central", "Category": "Technology", "Sub-Category": "Phones", "Sales": "1,500"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Chicago", "State": "Illinois", "Region": "Central", "Category": "Furniture", "Sub-Category": "Chairs", "Sales": "950"},
@@ -200,6 +212,7 @@ class CalculationTests(unittest.TestCase):
         self.assertEqual(result, expected)
 
     def test_highvalue_8(self):
+        # sale exactly equal to 1000
         data = [
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Boston", "State": "Massachusetts", "Region": "East", "Category": "Technology", "Sub-Category": "Accessories", "Sales": "1000"},
             {"Ship Mode": "Standard Class", "Segment": "Consumer", "City": "Boston", "State": "Massachusetts", "Region": "East", "Category": "Furniture", "Sub-Category": "Tables", "Sales": "1200"}
