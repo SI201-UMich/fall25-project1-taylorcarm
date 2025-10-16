@@ -14,6 +14,7 @@ import csv
 #         for row in csv_file:
 #             data.append(row)
 #     return data
+# ^ this is wrong bc it returns list of list (rubric asks for list of dicts)
 
 def get_data(file):
     with open(file) as fn:
